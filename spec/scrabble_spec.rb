@@ -11,4 +11,12 @@ describe('String#scrabble') do
     expect("e".scrabble()).to(eq(1))
   end
 
+  it('returns a scrabble score equal to the sum of all the one-point letters included') do
+    expect("ae".scrabble()).to(eq(2))
+  end
+
+  it('returns a scrabble score equal to the sum of all the one-point and two-point letters included') do
+    expect("dog".scrabble()).to(eq(5))
+  end
+
 end
