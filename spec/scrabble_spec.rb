@@ -27,4 +27,11 @@ describe('String#scrabble') do
     expect("help".scrabble()).to(eq(9))
   end
 
+  it('returns a scrabble score equal to the sum of all the one-point, two-point, three-point, four-point and five-point letters included') do
+    expect("kelp".scrabble()).to(eq(10))
+  end
+
+  it('returns a scrabble score equal to the sum of all the one-point, two-point, three-point, four-point, five-point and eight-point letters included') do
+    expect("jack".scrabble()).to(eq(17))
+  end
 end
