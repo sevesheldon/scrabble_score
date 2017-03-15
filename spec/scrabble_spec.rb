@@ -19,4 +19,12 @@ describe('String#scrabble') do
     expect("dog".scrabble()).to(eq(5))
   end
 
+  it('returns a scrabble score equal to the sum of all the one-point, two-point and three-point letters included') do
+    expect("blimp".scrabble()).to(eq(11))
+  end
+
+  it('returns a scrabble score equal to the sum of all the one-point, two-point, three-point and four-point letters included') do
+    expect("help".scrabble()).to(eq(9))
+  end
+
 end
