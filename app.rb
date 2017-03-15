@@ -11,6 +11,7 @@ end
 
 get('/score') do
 #binding.pry
-  @score = params.fetch('score').leetspeak()
+  @word = params.fetch('word').upcase()
+  @score = params.fetch('word').scrabble()
   erb(:score)
 end
